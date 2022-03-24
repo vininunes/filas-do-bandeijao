@@ -1,6 +1,3 @@
 export default {
-    urlBackendOld: 'http://localhost:6001',
-    urlBackend: 'http://edtools-dev.technomar.com.br:6001',
-    domainFilesDev: 'http://localhost:6001/files',
-    domainFilesProd: 'https://edtoolsx.s3.us-west-1.amazonaws.com'
+    mapboxToken: "pk.eyJ1Ijoidm51bnhzIiwiYSI6ImNsMTRpa3hybTI2d3gzaXFocTRjd3h2azYifQ.KWl2y_v7kFY0qdROZYwf4A"
 }
