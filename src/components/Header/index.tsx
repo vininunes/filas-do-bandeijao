@@ -16,9 +16,9 @@ export default function HeaderComponent() {
     const [bodyIsOpen, setBodyIsOpen] = useState(false)
 
     return <Container>
-        <Header>
+        <Header onClick={() => setBodyIsOpen(!bodyIsOpen)}>
             <Title>Filas do bandejão</Title>
-            <Button onClick={() => setBodyIsOpen(!bodyIsOpen)}>
+            <Button>
                 <IconButton
                     animate={bodyIsOpen ? 'open' : 'closed'}
                     variants={variantsIconButton}

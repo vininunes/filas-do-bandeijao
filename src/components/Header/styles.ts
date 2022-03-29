@@ -36,6 +36,8 @@ export const Header = styled.div`
 
     width: 100%;
     height: auto;
+
+    cursor: pointer;
 `
 
 export const Title = styled.h3`
@@ -80,6 +82,8 @@ export const variantsIconButton = {
 }
 
 export const Body = styled(motion.div)`
+    display: none;
+
     overflow: hidden;
 `
 
