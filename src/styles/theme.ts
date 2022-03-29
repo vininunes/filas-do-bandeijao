@@ -1,3 +1,5 @@
+import { rgbToHex } from "@material-ui/core"
+
 const theme = {
     colors: {
         white: '#FFF',
@@ -22,6 +24,12 @@ const theme = {
 
         yellow: {
             500: '#FFCB47'
+        }
+    },
+
+    colorsOpacity: {
+        white: {
+            10: 'rgb(255,255,255, 0.1)'
         }
     },
 
