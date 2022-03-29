@@ -1,8 +1,34 @@
-import { Button, Container, Title } from './styles'
+import { useState } from 'react'
+import IconProvider from '../IconProvider'
+import List from '../List'
+import {
+    Container,
+    Header,
+    Title,
+    Button,
+    IconButton,
+    Body,
+    variantsIconButton,
+    variantsBody
+} from './styles'
 
-export default function Header() {
+export default function HeaderComponent() {
+    const [bodyIsOpen, setBodyIsOpen] = useState(false)
+
     return <Container>
-        <Title>Filas do bandeijão</Title>
-        <Button>T</Button>
+        <Header>
+            <Title>Filas do bandejão</Title>
+            <Button onClick={() => setBodyIsOpen(!bodyIsOpen)}>
+                <IconButton
+                    animate={bodyIsOpen ? 'open' : 'closed'}
+                    variants={variantsIconButton}
+                >
+                    <IconProvider icon={'expandMore'} size={'medium'} />
+                </IconButton>
+            </Button>
+        </Header>
+        <Body animate={bodyIsOpen ? 'open' : 'closed'} variants={variantsBody}>
+            <List/>
+        </Body>
     </Container>
 }
