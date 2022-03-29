@@ -1,0 +1,133 @@
+[
+    {
+        "id": "IF",
+        "name": "Instituto de fisica",
+        "center": [-46.735686158064850, -23.5606376406829270],
+        "area": {
+            "upperLeft": [-46.73680768125095, -23.55931392564618],
+            "lowerRight": [ -46.73453211844199, -23.56121392810104]
+        },
+        "referencePoints": [
+            {
+                "id": "IF_REFERENCE_POINT_1",
+                "name": "Bicicletas do Itaú"
+            },
+            {
+                "id": "IF_REFERENCE_POINT_2",
+                "name": "Esquina 1"
+            },
+            {
+                "id": "IF_REFERENCE_POINT_3",
+                "name": "Faixa de pedestres"
+            },
+            {
+                "id": "IF_REFERENCE_POINT_4",
+                "name": "Esquina 2"
+            },
+            {
+                "id": "IF_REFERENCE_POINT_5",
+                "name": "Ponto de ônibus"
+            }
+        ],
+        "operation": {
+            "sunday": {
+                "morning": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "afternoon": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "night": {
+                    "working": false,
+                    "interval": [0,0]
+                }
+            },
+            "monday": {
+                "morning": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "afternoon": {
+                    "working": true,
+                    "interval": [0,0]
+                },
+                "night": {
+                    "working": true,
+                    "interval": [0,0]
+                }
+            },
+            "tuesday": {
+                "morning": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "afternoon": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "night": {
+                    "working": false,
+                    "interval": [0,0]
+                }
+            },
+            "wednesday": {
+                "morning": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "afternoon": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "night": {
+                    "working": false,
+                    "interval": [0,0]
+                }
+            },
+            "thursday": {
+                "morning": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "afternoon": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "night": {
+                    "working": false,
+                    "interval": [0,0]
+                }
+            },
+            "friday": {
+                "morning": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "afternoon": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "night": {
+                    "working": false,
+                    "interval": [0,0]
+                }
+            },
+            "saturday": {
+                "morning": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "afternoon": {
+                    "working": false,
+                    "interval": [0,0]
+                },
+                "night": {
+                    "working": false,
+                    "interval": [0,0]
+                }
+            }
+        }
+    }
+]
