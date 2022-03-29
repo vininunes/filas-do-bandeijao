@@ -1,7 +1,8 @@
 {
-    "name": "filas-do-bandeijao",
+    "name": "flias-do-bandejao",
     "version": "0.0.1",
     "private": true,
+    "author": "Vinícius Nunes Cabral de Souza",
     "scripts": {
         "dev": "next dev",
         "build": "next build && next export",
