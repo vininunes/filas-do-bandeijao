@@ -18,7 +18,7 @@ export default function Home() {
             initialViewState={{
                 longitude: -46.729814074270706,
                 latitude: -23.562668693769865,
-                zoom: 14
+                zoom: 14.5
             }}
             style={{width: '100%', height: '100%'}}
             mapStyle="mapbox://styles/mapbox/streets-v9"
