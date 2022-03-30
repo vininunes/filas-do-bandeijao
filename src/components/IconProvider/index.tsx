@@ -1,6 +1,6 @@
 import { ComponentProps } from './types'
 
-import { ExpandMore, NavigateNext, Place, Speed } from '@material-ui/icons'
+import { Close, ExpandMore, Group, NavigateNext, Place, Speed } from '@material-ui/icons'
 
 export default function IconProvider({ icon, size }: ComponentProps) {
     switch (icon) {
@@ -12,6 +12,10 @@ export default function IconProvider({ icon, size }: ComponentProps) {
             return <Speed fontSize={size} />
         case 'navigateNext':
             return <NavigateNext fontSize={size} />
+        case 'close':
+            return <Close fontSize={size} />
+        case 'group':
+            return <Group fontSize={size} />
         default:
             return <div />
     }
