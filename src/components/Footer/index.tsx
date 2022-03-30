@@ -15,11 +15,14 @@ function FooterComponent({ navigation, toggleStatusForm }: Props) {
     const { statusFormIsVisible } = navigation
 
     return (
-        <Container animate={statusFormIsVisible ? 'open' : 'closed'} variants={variantsContainer}>
+        <Container
+            animate={!statusFormIsVisible ? 'open' : 'closed'}
+            variants={variantsContainer}
+            onClick={() => toggleStatusForm()}>
             <span>
                 <Title>Indicar estado da fila</Title>
             </span>
-            <Button onClick={() => toggleStatusForm()}>
+            <Button>
                 <IconButton>
                     <IconProvider icon={'navigateNext'} size={'medium'} />
                 </IconButton>

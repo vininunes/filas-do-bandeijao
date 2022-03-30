@@ -1,3 +1,1 @@
-export interface ComponentProps {
-    isActive: boolean
-}
+export interface ComponentProps {}
