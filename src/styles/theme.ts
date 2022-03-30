@@ -1,4 +1,4 @@
-import { rgbToHex } from "@material-ui/core"
+import { rgbToHex } from '@material-ui/core'
 
 const theme = {
     colors: {
@@ -6,12 +6,13 @@ const theme = {
         black: '#000',
 
         blue: {
-            500: '#3D9CE2',
+            500: '#3D9CE2'
         },
 
         green: {
             500: '#2ECC71',
-            600: '#AAEB3E'
+            600: '#AAEB3E',
+            900: '#24a65b'
         },
 
         red: {
@@ -33,7 +34,7 @@ const theme = {
         }
     },
 
-    background: 'rgb(13,19,31,0.9)',
+    background: 'rgb(13,19,31,0.9)'
 }
 
 export default theme
