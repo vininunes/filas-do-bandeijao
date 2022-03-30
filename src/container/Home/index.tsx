@@ -1,17 +1,36 @@
 import { Container } from './styles'
 
-import Map, { ViewState } from 'react-map-gl'
+import Map, { Marker, ViewState } from 'react-map-gl'
 
 import env from '@/config/env'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import IconProvider from '@/components/IconProvider'
+import { iconIF } from '@/assets/png'
 
-export default function Home() {
+import { connect } from 'react-redux'
+import { dispatchToProps, stateToProps } from '@/store/connect'
+import { StateProps } from '@/store/connect/types'
+import StatusForm from '@/components/StatusForm'
+
+type Props = StateProps
+
+function Home({ navigation }: Props) {
+    const { statusFormIsVisible } = navigation
+
     const [viewState, setViewState] = useState<ViewState>(null)
+    const [userLocation, setUserLocation] = useState<any>()
+
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition(event => setUserLocation(event.coords))
+    }, [])
 
     return (
         <Container>
             <Header />
+            <Footer />
+            <StatusForm />
             <Map
                 {...viewState}
                 onMove={event => setViewState(event.viewState)}
@@ -27,7 +46,14 @@ export default function Home() {
                     [-46.779078543110245, -23.58418234374612],
                     [-46.6607033378379, -23.535484034820612]
                 ]}
-                onClick={event => console.log(event.lngLat)}></Map>
+                onClick={event => console.log(event.lngLat)}>
+                <Marker latitude={-23.56065209531843} longitude={-46.73572426484927}>
+                    {/* <IconProvider icon={'place'} size={'medium'} /> */}
+                    <img src={iconIF} />
+                </Marker>
+            </Map>
         </Container>
     )
 }
+
+export default connect(stateToProps, dispatchToProps)(Home)
