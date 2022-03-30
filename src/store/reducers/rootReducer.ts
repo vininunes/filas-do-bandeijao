@@ -1,3 +1,7 @@
 import { combineReducers } from 'redux'
 
-export default combineReducers({})
+import navigation from './navigation'
+
+export default combineReducers({
+    navigation
+})
