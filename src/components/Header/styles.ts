@@ -4,7 +4,7 @@ import theme from '@/styles/theme'
 
 import { motion } from 'framer-motion'
 
-export const Container = styled.div`
+export const Container = styled(motion.div)`
     position: absolute;
     z-index: 1;
 
@@ -13,8 +13,8 @@ export const Container = styled.div`
 
     border-radius: 10px;
 
-    margin: 0.75rem ;
-    padding: 1rem ;
+    margin: 0.75rem;
+    padding: 1rem;
 
     background-color: ${theme.background};
 
@@ -28,6 +28,14 @@ export const Container = styled.div`
         width: calc(100vw - 1.5rem);
     }
 `
+export const variantsContainer = {
+    open: {
+        translateX: '0rem'
+    },
+    closed: {
+        translateX: '-30rem'
+    }
+}
 
 export const Header = styled.div`
     display: flex;
@@ -60,7 +68,7 @@ export const Button = styled.button`
     transition: background-color 0.3s;
 
     &:hover {
-        background-color: rgb(0,0,0,0.15);
+        background-color: rgb(0, 0, 0, 0.15);
     }
 `
 

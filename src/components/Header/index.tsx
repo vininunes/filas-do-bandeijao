@@ -1,13 +1,31 @@
 import { useState } from 'react'
 import IconProvider from '../IconProvider'
 import List from '../List'
-import { Container, Header, Title, Button, IconButton, Body, variantsIconButton, variantsBody } from './styles'
+import {
+    Container,
+    Header,
+    Title,
+    Button,
+    IconButton,
+    Body,
+    variantsIconButton,
+    variantsBody,
+    variantsContainer
+} from './styles'
 
-export default function HeaderComponent() {
+import { connect } from 'react-redux'
+import { dispatchToProps, stateToProps } from '@/store/connect'
+import { StateProps, DispatchProps } from '@/store/connect/types'
+
+type Props = StateProps & DispatchProps
+
+function HeaderComponent({ navigation }: Props) {
+    const { statusFormIsVisible } = navigation
+
     const [bodyIsOpen, setBodyIsOpen] = useState(false)
 
     return (
-        <Container>
+        <Container animate={!statusFormIsVisible ? 'open' : 'closed'} variants={variantsContainer}>
             <Header onClick={() => setBodyIsOpen(!bodyIsOpen)}>
                 <Title>Filas do bandejão</Title>
                 <Button>
@@ -22,3 +40,5 @@ export default function HeaderComponent() {
         </Container>
     )
 }
+
+export default connect(stateToProps, dispatchToProps)(HeaderComponent)
