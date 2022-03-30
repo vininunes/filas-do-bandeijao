@@ -1,6 +1,6 @@
 import { ComponentProps } from './types'
 
-import { ExpandMore, Place, Speed } from '@material-ui/icons'
+import { ExpandMore, NavigateNext, Place, Speed } from '@material-ui/icons'
 
 export default function IconProvider({ icon, size }: ComponentProps) {
     switch (icon) {
@@ -10,6 +10,8 @@ export default function IconProvider({ icon, size }: ComponentProps) {
             return <Place fontSize={size} />
         case 'speed':
             return <Speed fontSize={size} />
+        case 'navigateNext':
+            return <NavigateNext fontSize={size} />
         default:
             return <div />
     }
